@@ -1,0 +1,9 @@
+language: csharp
+solution: All-Parts.sln
+mono: none
+dotnet: 2.2
+dist: xenial
+sudo: required
+script:
+    - dotnet restore
+    - dotnet build All-Parts.sln -c Release
