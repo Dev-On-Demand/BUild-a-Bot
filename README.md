@@ -1,7 +1,8 @@
 # Build-a-Bot
 All the source for the Build a Bot series on my blog.
 
-[![Build Status](https://thirsol.visualstudio.com/Build%20a%20Bot/_apis/build/status/mrThirsty.Build-a-Bot?branchName=master)](https://thirsol.visualstudio.com/Build%20a%20Bot/_build/latest?definitionId=2?branchName=master)
+[![Build Status](https://travis-ci.org/Dev-On-Demand/BUild-a-Bot.svg?branch=master)](https://travis-ci.org/Dev-On-Demand/BUild-a-Bot) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This repo uses azure pipelines for automated builds.
 
 ### Breakdown of the parts
