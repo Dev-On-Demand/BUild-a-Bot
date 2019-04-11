@@ -1,7 +1,7 @@
 # Build-a-Bot
 All the source for the Build a Bot series on my blog.
 
-[![Build Status](https://travis-ci.org/Dev-On-Demand/BUild-a-Bot.svg?branch=master)](https://travis-ci.org/Dev-On-Demand/BUild-a-Bot) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/Dev-On-Demand/BUild-a-Bot.svg?branch=master)](https://travis-ci.com/Dev-On-Demand/BUild-a-Bot) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repo uses azure pipelines for automated builds.
 
