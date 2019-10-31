@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using BuildABot.Adapters;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Bot.Builder.Integration.AspNet.Core;
-using Microsoft.Bot.Builder;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BuildABot
 {
@@ -25,28 +25,26 @@ namespace BuildABot
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddBot<BuildABot>(options => { 
-                options.OnTurnError = async(context, exception) => {
-                    await context.SendActivityAsync("Looks like something went wrong! Please try again");
-                };
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-                options.Middleware.Add(new ShowTypingMiddleware());
-            });
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<IBotFrameworkHttpAdapter, BuildABotAdapter>();
+            services.AddSingleton<IBot, BuildABot>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseHsts();
+            }
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.UseBotFramework();
+
             app.UseMvc();
         }
     }

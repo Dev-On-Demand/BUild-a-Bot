@@ -4,15 +4,13 @@
     "services": [
         {
             "type": "endpoint",
-            "appId": "",
-            "appPassword": "",
             "endpoint": "http://localhost:5000/api/messages",
-            "id": "501d0c80-2870-11e9-a413-973fdf6a1d07",
-            "name": "Build a Bot"
+            "name": "Build A Bot",
+            "id": "210"
         }
     ],
     "padlock": "",
     "version": "2.0",
-    "overrides": null,
-    "path": "/Sandbox/GIT/Build-a-Bot/Pt 1. Hello World/Build A Bot.bot"
+    "path": "/Users/andrew/Sandbox/GIT/Build-a-Bot/Build A Bot.bot",
+    "overrides": null
 }
